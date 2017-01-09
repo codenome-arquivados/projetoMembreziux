@@ -29,8 +29,12 @@
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a href="#"><i class="zmdi ion-settings"></i> <span> Suporte técnico </span> </a>
+                    <a href="#"><i class="zmdi ion-person-stalker"></i> <span> Projetos sociais </span> </a></li>
+                    <li class="has-submenu">
+                        <a href="#"><i class="zmdi ion-settings"></i> <span> Suporte técnico </span> </a></li>
+                    </li>
                 </ul>
+
             </li>
 
         </ul>
