@@ -8,7 +8,6 @@
     </div>
 </div>
 
-
     <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
             <div class="card-box tilebox-one">
@@ -221,7 +220,7 @@
         <div class="col-xs-12 col-lg-12 col-xl-5">
             <div class="card-box">
 
-                <h4 class="header-title m-t-0 m-b-30">Top Contracts</h4>
+                <h4 class="header-title m-t-0 m-b-30">Projetos sociais</h4>
 
                 <div class="table-responsive">
                     <table class="table table-bordered m-b-0">
