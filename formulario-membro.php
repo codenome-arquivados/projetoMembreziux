@@ -19,7 +19,7 @@
                                         Preencha as informações abaixo para cadastrar um novo membro.
                                     </p>
 
-                                    <form id="basic-form" action="#">
+                                    <form id="basic-form" action="controller/membroController.php" method="post">
                                         <div>
                                             <h3>Informações pessoais</h3>
                                             <section>
@@ -73,11 +73,11 @@
 
                                                     <div class="col-xs-12 col-sm-2">
                                                         <div class="form-group clearfix">
-                                                            <label for="datepicker-autoclose">Batizado<span class="text-danger">*</span></label>
+                                                            <label for="batizado">Batizado<span class="text-danger">*</span></label>
                                                             <div>
                                                                 <div class="input-group">
                                                                     <div class="switchery-demo">
-                                                                        <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2" name="batizado"/>
+                                                                        <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2" name="batizado" id="batizado"/>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -90,70 +90,104 @@
                                             <h3>Endereço</h3>
                                             <section>
                                                 <div class="row">
-                                                    <div class="col-xs-12 col-sm-6">
+                                                    <div class="col-xs-12 col-sm-8">
                                                         <div class="form-group clearfix">
-                                                            <label for="name"> First name<span class="text-danger">*</span></label>
+                                                            <label for="endereco"> Endereço<span class="text-danger">*</span></label>
                                                             <div>
-                                                                <input id="name" name="name" type="text" class="required form-control">
+                                                                <input id="endereco" name="endereco" type="text" class="required form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4">
+                                                        <div class="form-group clearfix">
+                                                            <label for="bairro"> Bairro<span class="text-danger">*</span></label>
+                                                            <div>
+                                                                <input id="barirro" name="bairro" type="text" class="required form-control">
                                                             </div>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-xs-12 col-sm-6">
-                                                        <div class="form-group clearfix">
-                                                            <label for="surname"> Last name<span class="text-danger">*</span></label>
-                                                            <div>
-                                                                <input id="surname" name="surname" type="text" class="required form-control">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
 
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-6">
                                                         <div class="form-group clearfix">
-                                                            <label for="email">Email<span class="text-danger">*</span></label>
+                                                            <label for="estado"> Estado<span class="text-danger">*</span></label>
                                                             <div>
-                                                                <input id="email" name="email" type="text" class="required email form-control">
+                                                                <input id="estado" name="estado" type="text" class="required form-control">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-6">
                                                         <div class="form-group clearfix">
-                                                            <label for="address">Address<span class="text-danger">*</span></label>
+                                                            <label for="cidade"> Cidade<span class="text-danger">*</span></label>
                                                             <div>
-                                                                <input id="address" name="address" type="text" class="form-control">
+                                                                <input id="cidade" name="cidade" type="text" class="required form-control">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div><!-- end row -->
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-6">
-                                                        <div class="form-group clearfix">
-                                                            <label>(<span class="text-danger">*</span>) Mandatory</label>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end row -->
+                                                </div>
 
                                             </section>
                                             <h3>Contatos</h3>
                                             <section>
-                                                <div class="form-group clearfix row">
-                                                    <div class="col-lg-12">
-                                                        <ul class="list-unstyled w-list">
-                                                            <li><b>First Name :</b> Jonathan </li>
-                                                            <li><b>Last Name :</b> Smith </li>
-                                                            <li><b>Emial:</b> jonathan@smith.com</li>
-                                                            <li><b>Address:</b> 123 Your City, Cityname. </li>
-                                                        </ul>
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-6">
+                                                        <div class="form-group clearfix">
+                                                            <label for="telefone"> Telefone<span class="text-danger">*</span></label>
+                                                            <div>
+                                                                <input id="telefone" name="telefone" type="text" class="required form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xs-12 col-sm-6">
+                                                        <div class="form-group clearfix">
+                                                            <label for="celular"> Celular<span class="text-danger">*</span></label>
+                                                            <div>
+                                                                <input id="celular" name="celular" type="text" class="required form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="row">
+
+                                                    <div class="col-xs-12 col-sm-6">
+                                                        <div class="form-group clearfix">
+                                                            <label for="email"> Email<span class="text-danger">*</span></label>
+                                                            <div>
+                                                                <input id="email" name="cidade" type="text" class="required email form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-6">
+                                                        <div class="form-group clearfix">
+                                                            <label for="facebook"> Facebook<span class="text-danger">*</span></label>
+                                                            <div>
+                                                                <input id="facebook" name="facebook" type="text" class="required form-control">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
+
+
+
+
                                             </section>
                                             <h3>Verifica informações</h3>
                                             <section>
                                                 <div class="form-group clearfix row">
                                                     <div class="col-lg-12">
+
+                                                        <p><strong>Nome:</strong> Thiago Cunha</p>
+                                                        <p><strong>Data de Nascimento:</strong> 18 de julho de 1989</p>
+                                                        <p><strong>Endereço:</strong> Rua das pacas, Unamar - Cabo Frio - Rio de Janeiro</p>
+                                                        <p><strong>Telefone: </strong>22 27724656</p>
+                                                        <p><strong>Celular: </strong>22 997901865</p>
+                                                        <p><strong>E-mail: </strong>grupocodenome@gmail.com</p>
+
                                                         <div class="checkbox checkbox-primary">
                                                             <input id="checkbox-h" type="checkbox">
                                                             <label for="checkbox-h">
