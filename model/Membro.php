@@ -151,8 +151,8 @@
 
             $sql = $this->dataBase->prepare($query);
             $sql->bindParam(":nome", $this->nome);
-            $sql->bindParam(":dataDeNascimento", $this->dataDeNascimento);
-            $sql->bindParam(":dataDeCriacaoDoMembro", $this->dataDeCriacaoDoMembro);
+            $sql->bindValue(":dataDeNascimento", $this->dataDeNascimento);
+            $sql->bindValue(":dataDeCriacaoDoMembro", $this->dataDeCriacaoDoMembro);
             $sql->bindParam(":endereco", $this->endereco);
             $sql->bindParam(":bairro", $this->bairro);
             $sql->bindParam(":cidade", $this->cidade);

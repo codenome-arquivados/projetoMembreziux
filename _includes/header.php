@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
-    <meta name="author" content="Coderthemes">
+    <meta name="description" content="Admin CMS">
+    <meta name="author" content="Thiago Cunha">
 
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <title>Membriux</title>
@@ -18,7 +18,7 @@
     <link href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="assets/plugins/clockpicker/bootstrap-clockpicker.min.css" rel="stylesheet">
     <link href="assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    
+
     <!--Form Wizard-->
     <link rel="stylesheet" type="text/css" href="assets/plugins/jquery.steps/demo/css/jquery.steps.css" />
 
