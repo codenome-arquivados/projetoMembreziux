@@ -17,20 +17,20 @@
     // $facebook = $_POST['facebook'];
 
 
-    $nome = 'Thiago';
-    $sobrenome = 'Cunha';
-    $dataDeNascimento = '12/18/1999';
+    $nome = "Thiago";
+    $sobrenome = "Cunha";
+    $dataDeNascimento = "12/18/1999";
     $dataDeCriacaoDoMembro = date("m/d/Y");
-    $estado_civil = 'CASADO';
-    $batizado = 'true';
-    $endereco = 'Rua das Oliveiras';
-    $bairro = 'Unamar';
-    $estado = 'Rio de Janeiro';
-    $cidade = 'Cabo Frio';
-    $telefone = '2227727272';
-    $celular = '22999999999';
-    $email = 'thiago@gmail.com';
-    $facebook = 'thiago@live.com';
+    $estado_civil = "SOLTEIRO";
+    $batizado = 'false';
+    $endereco = "Rua das Oliveiras";
+    $bairro = "Unamar";
+    $estado = "Rio de Janeiro";
+    $cidade = "Cabo Frio";
+    $telefone = "2227727272";
+    $celular = "22999999999";
+    $email = "thiago@gmail.com";
+    $facebook = "thiago@live.com";
 
 
     $membro = new Membro();

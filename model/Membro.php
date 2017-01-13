@@ -162,8 +162,9 @@
             $sql->bindParam(":email", $this->email);
             $sql->bindParam(":facebook", $this->facebook);
             $sql->bindParam(":estadoCivil", $this->estadoCivil);
-            $sql->bindParam(":batizado", $this->batizado);
+            $sql->bindValue(":batizado", $this->batizado);
 
+            $sql->execute();
         }
 
     }
