@@ -80,13 +80,13 @@ class Membro
         switch ($type) {
             case 'set':
                 if (isset($arguments[0])) {
-                    $field = lcfirst(substr('setNome', 3));
+                    $field = lcfirst(substr($name, 3));
                     /** @noinspection PhpVariableVariableInspection */
                     $this->$field = $arguments[0];
                 }
                 break;
             case 'get':
-                $field = lcfirst(substr('setNome', 3));
+                $field = lcfirst(substr($name, 3));
                 /** @noinspection PhpVariableVariableInspection */
                 return $this->$field;
                 break;
