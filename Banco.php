@@ -6,9 +6,9 @@
         private $numRows;
         private $array;
 
-        function __construct($host, $dbname, $dbuser, $dbpass) {
+        function __construct($dbhost, $dbname, $dbuser, $dbpass) {
             try {
-                $this->pdo = new PDO("mysql:dbname=".$dbname.";host=".$host, $dbuser, $dbpass);
+                $this->pdo = new PDO("mysql:dbname=".$dbname.";host=".$dbhost, $dbuser, $dbpass);
             } catch (PDOException $e) {
                 echo "Falha aose conectar com o banco de dados: ".$e->getMessage();
             }
@@ -38,7 +38,7 @@
                 $sql = $sql.implode(", ", $dados);
                 $this->pdo->query($sql);
             }
-            echo "Usaário inserido com sucesso";
+            echo "Usuário inserido com sucesso";
         }
 
         public function update($table, $data, $where = array(), $where_cond = "AND") {

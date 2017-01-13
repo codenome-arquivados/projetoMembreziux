@@ -1,7 +1,7 @@
 <?php
 
-    require_once 'Banco.php';
-    require_once 'config.php';
+    require 'Banco.php';
+    require 'config.php';
 
     class Membro {
 
@@ -116,7 +116,7 @@
 
         public function adicionaMembro() {
             $banco = new Banco(DB_HOST, DB_NAME, DB_USER, DB_PASS);
-            $banco->insert('membros', $array = array(
+            $banco->insert('membros', array(
                 'nome'               => $this->getNome(),
                 'data_de_nascimento' => $this->getDataDeNascimento(),
                 'endereco'           => $this->getEndereco(),

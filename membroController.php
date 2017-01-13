@@ -19,17 +19,17 @@
 
     $nome = 'Thiago';
     $sobrenome = 'Cunha';
-    $dataDeNascimento = '07/18/1989';
+    $dataDeNascimento = '12/18/1999';
     $estado_civil = 'CASADO';
     $batizado = 'true';
-    $endereco = 'Rua das Pacas';
+    $endereco = 'Rua das Oliveiras';
     $bairro = 'Unamar';
     $estado = 'Rio de Janeiro';
     $cidade = 'Cabo Frio';
-    $telefone = '2227724656';
-    $celular = '22997891865';
-    $email = 'grupocodenome@gmail.com';
-    $facebook = 'thiagoguitarra@live.com';
+    $telefone = '2227727272';
+    $celular = '22999999999';
+    $email = 'thiago@gmail.com';
+    $facebook = 'thiago@live.com';
 
 
     $membro = new Membro();
