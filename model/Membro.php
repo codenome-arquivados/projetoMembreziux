@@ -1,12 +1,12 @@
 <?php
 
-    require 'Banco.php';
     require 'config.php';
 
     class Membro {
 
         private $nome;
         private $dataDeNascimento;
+        private $dataDeCriacaoDoMembro;
         private $endereco;
         private $estado;
         private $cidade;
@@ -17,6 +17,16 @@
         private $facebook;
         private $estadoCivil;
         private $batizado;
+        private $dataBase;
+
+        public function __construct() {
+            try {
+                $this->dataBase = new PDO("mysql:dbname=".DB_NAME.";host=".DB_HOST, DB_USER, DB_PASS);
+            } catch (PDOException $e) {
+                echo "Erro ao conectar com o Banco de Dados: ".$e->getMessage();
+            }
+
+        }
 
         public function getNome() {
             return $this->nome;
@@ -32,6 +42,14 @@
 
         public function setDataDeNascimento($dataDeNascimento) {
             $this->dataDeNascimento = $dataDeNascimento;
+        }
+
+        public function getDataDeCriacaoDoMembro() {
+            return $this->dataDeCriacaoDoMembro;
+        }
+
+        public function setDataDeCriacaoDoMembro($dataDeCriacaoDoMembro) {
+            $this->dataDeCriacaoDoMembro = $dataDeCriacaoDoMembro;
         }
 
         public function getEndereco() {
@@ -114,21 +132,38 @@
             return $this->estado;
         }
 
-        public function adicionaMembro() {
-            $banco = new Banco(DB_HOST, DB_NAME, DB_USER, DB_PASS);
-            $banco->insert('membros', array(
-                'nome'               => $this->getNome(),
-                'data_de_nascimento' => $this->getDataDeNascimento(),
-                'endereco'           => $this->getEndereco(),
-                'bairro'             => $this->getBairro(),
-                'cidade'             => $this->getCidade(),
-                'telefone'           => $this->getTelefone(),
-                'celular'            => $this->getCelular(),
-                'email'              => $this->getEmail(),
-                'facebook'           => $this->getFacebook(),
-                'estado_civil'       => $this->getEstadoCivil(),
-                'batizado'           => $this->getBatizado()
-            ));
+        public function insert() {
+            $query = "INSERT INTO membros SET
+                nome = :nome,
+                data_de_nascimento = :dataDeNascimento,
+                data_de_criacao_do_membro = :dataDeCriacaoDoMembro;
+                endereco = :endereco,
+                bairro = :bairro,
+                cidade = :cidade,
+                estado = :estado,
+                telefone = :telefone,
+                celular = :celular;
+                email = :email;
+                facebook = :facebook;
+                estado_civil = :estadoCivil;
+                batizado = :batizado"
+            ;
+
+            $sql = $this->dataBase->prepare($query);
+            $sql->bindParam(":nome", $this->nome);
+            $sql->bindParam(":dataDeNascimento", $this->dataDeNascimento);
+            $sql->bindParam(":dataDeCriacaoDoMembro", $this->dataDeCriacaoDoMembro);
+            $sql->bindParam(":endereco", $this->endereco);
+            $sql->bindParam(":bairro", $this->bairro);
+            $sql->bindParam(":cidade", $this->cidade);
+            $sql->bindParam(":estado", $this->estado);
+            $sql->bindParam(":telefone", $this->telefone);
+            $sql->bindParam(":celular", $this->celular);
+            $sql->bindParam(":email", $this->email);
+            $sql->bindParam(":facebook", $this->facebook);
+            $sql->bindParam(":estadoCivil", $this->estadoCivil);
+            $sql->bindParam(":batizado", $this->batizado);
+
         }
 
     }

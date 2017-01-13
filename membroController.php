@@ -20,6 +20,7 @@
     $nome = 'Thiago';
     $sobrenome = 'Cunha';
     $dataDeNascimento = '12/18/1999';
+    $dataDeCriacaoDoMembro = date("m/d/Y");
     $estado_civil = 'CASADO';
     $batizado = 'true';
     $endereco = 'Rua das Oliveiras';
@@ -35,6 +36,7 @@
     $membro = new Membro();
     $membro->setNome($nome." ".$sobrenome);
     $membro->setDataDeNascimento($dataDeNascimento);
+    $membro->setDataDeCriacaoDoMembro($dataDeCriacaoDoMembro);
     $membro->setEstadoCivil($estado_civil);
     $membro->setBatizado($batizado);
     $membro->setEndereco($endereco);
@@ -45,7 +47,10 @@
     $membro->setCelular($celular);
     $membro->setEmail($email);
     $membro->setFacebook($facebook);
-    $membro->adicionaMembro();
+
+    $membro->insert();
+
+    print_r($membro);
 
 
 ?>
