@@ -32,6 +32,7 @@ var resizefunc = [];
 <script src="assets/plugins/clockpicker/bootstrap-clockpicker.js"></script>
 <script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script src="assets/pages/jquery.form-pickers.init.js"></script>
+<script src="assets/js/formulario-membro.js"></script>
 
 
 <!--Form Wizard-->

@@ -19,7 +19,7 @@
                                         Preencha as informações abaixo para cadastrar um novo membro.
                                     </p>
 
-                                    <form id="basic-form" action="controller/membroController.php" method="post">
+                                    <form id="basic-form" action="membroController.php" method="post">
                                         <div>
                                             <h3>Informações pessoais</h3>
                                             <section>
@@ -48,7 +48,7 @@
                                                             <label for="datepicker-autoclose">Data de Nascimento<span class="text-danger">*</span></label>
                                                             <div>
                                                                 <div class="input-group">
-                                                                    <input type="text" class="form-control" placeholder="mm/dd/yyyy" name="dataDeNascimento" id="datepicker-autoclose">
+                                                                    <input type="text" class="form-control" placeholder="yyyy/mm/dd" name="dataDeNascimento" id="datepicker-autoclose">
                                                                     <span class="input-group-addon bg-custom b-0"><i class="icon-calender"></i></span>
                                                                 </div>
                                                             </div>
@@ -64,8 +64,8 @@
                                                                     <option value="1">Casado(a)</option>
                                                                     <option value="2">Solteiro(a)</option>
                                                                     <option value="3">Divorciado(a)</option>
-                                                                    <option value="4">Viuvo(a)</option>
-                                                                    <option value="5">União estável</option>
+                                                                    <option value="4">União estável</option>
+                                                                    <option value="5">Viuvo(a)</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -102,7 +102,7 @@
                                                         <div class="form-group clearfix">
                                                             <label for="bairro"> Bairro<span class="text-danger">*</span></label>
                                                             <div>
-                                                                <input id="barirro" name="bairro" type="text" class="required form-control">
+                                                                <input id="bairro" name="bairro" type="text" class="required form-control">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -158,7 +158,7 @@
                                                         <div class="form-group clearfix">
                                                             <label for="email"> Email<span class="text-danger">*</span></label>
                                                             <div>
-                                                                <input id="email" name="cidade" type="text" class="required email form-control">
+                                                                <input id="email" name="email" type="text" class="required email form-control">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -181,7 +181,9 @@
                                                 <div class="form-group clearfix row">
                                                     <div class="col-lg-12">
 
-                                                        <p><strong>Nome:</strong> Thiago Cunha</p>
+                                                        <p><strong>Nome:</strong><script type="text/javascript">document.write(nome);
+
+                                                        </script></p>
                                                         <p><strong>Data de Nascimento:</strong> 18 de julho de 1989</p>
                                                         <p><strong>Endereço:</strong> Rua das pacas, Unamar - Cabo Frio - Rio de Janeiro</p>
                                                         <p><strong>Telefone: </strong>22 27724656</p>
