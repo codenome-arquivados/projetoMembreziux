@@ -58,9 +58,9 @@
 
         //creating donut chart
         var $donutData = [
-                {label: "English Language 01", value: 12},
-                {label: "Italian Language 02", value: 30},
-                {label: "French Language 03", value: 20}
+                {label: "Novos membros", value: 12},
+                {label: "Conversas com membros", value: 30},
+                {label: "Saída", value: 4}
             ];
         this.createDonutChart('morris-donut-example', $donutData, ['#3db9dc','#1bb99a', '#ebeff2']);
     },
