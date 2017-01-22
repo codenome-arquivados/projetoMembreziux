@@ -14,7 +14,7 @@
                 <i class="icon-layers pull-xs-right text-muted"></i>
                 <h6 class="text-muted text-uppercase m-b-20">Número de Membros</h6>
                 <h2 class="m-b-20" data-plugin="counterup">1,587</h2>
-                <span class="label label-success"> +11% </span> <span class="text-muted">From previous period</span>
+                <span class="label label-success"> +11% </span> <span class="text-muted">Em todo o período deste ano</span>
             </div>
         </div>
 
@@ -22,17 +22,27 @@
             <div class="card-box tilebox-one">
                 <i class="icon-paypal pull-xs-right text-muted"></i>
                 <h6 class="text-muted text-uppercase m-b-20">Contas a pagar</h6>
-                <h2 class="m-b-20">R$<span data-plugin="counterup">46,782</span></h2>
-                <span class="label label-danger"> -29% </span> <span class="text-muted">From previous period</span>
+                <h2 class="m-b-20">R$<span data-plugin="counterup">
+                    <?php
+                        $saida = 7235.65;
+                        echo $saida;
+                    ?>
+            </span></h2>
+                <span class="label label-danger"> -29% </span> <span class="text-muted">Em todo o período deste ano</span>
             </div>
         </div>
 
         <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
             <div class="card-box tilebox-one">
                 <i class="icon-chart pull-xs-right text-muted"></i>
-                <h6 class="text-muted text-uppercase m-b-20">Recebido até o momento</h6>
-                <h2 class="m-b-20">$<span data-plugin="counterup">15.9</span></h2>
-                <span class="label label-pink"> 0% </span> <span class="text-muted">From previous period</span>
+                <h6 class="text-muted text-uppercase m-b-20">Entrada</h6>
+                <h2 class="m-b-20">R$<span data-plugin="counterup">
+                    <?php
+                        $entrada = 13658.08;
+                        echo $entrada;
+                    ?>
+                </span></h2>
+                <span class="label label-pink"> 0% </span> <span class="text-muted">Em todo o período deste ano</span>
             </div>
         </div>
 
@@ -40,8 +50,15 @@
             <div class="card-box tilebox-one">
                 <i class="icon-rocket pull-xs-right text-muted"></i>
                 <h6 class="text-muted text-uppercase m-b-20">Receita</h6>
-                <h2 class="m-b-20" data-plugin="counterup">1,890</h2>
-                <span class="label label-warning"> +89% </span> <span class="text-muted">Last year</span>
+                <h2 class="m-b-20" data-plugin="counterup">
+                    <span data-plugin="counterup">
+                    <?php
+                        $receita = $entrada - $saida;
+                        echo $receita;
+                    ?>
+                    </span>
+                </h2>
+                <span class="label label-warning"> +89% </span> <span class="text-muted">último mês</span>
             </div>
         </div>
     </div>
@@ -121,17 +138,17 @@
                             <a href="#">
                                 <div class="inbox-item">
                                     <div class="inbox-item-img"><img src="assets/images/users/avatar-1.jpg" class="img-circle" alt=""></div>
-                                    <p class="inbox-item-author">Chadengle</p>
-                                    <p class="inbox-item-text">Hey! there I'm available...</p>
-                                    <p class="inbox-item-date">13:40 PM</p>
+                                    <p class="inbox-item-author">Flaviano Martins</p>
+                                    <p class="inbox-item-text">Ser livre e obediente</p>
+                                    <p class="inbox-item-date">18/07/1989</p>
                                 </div>
                             </a>
                             <a href="#">
                                 <div class="inbox-item">
                                     <div class="inbox-item-img"><img src="assets/images/users/avatar-2.jpg" class="img-circle" alt=""></div>
-                                    <p class="inbox-item-author">Tomaslau</p>
-                                    <p class="inbox-item-text">I've finished it! See you so...</p>
-                                    <p class="inbox-item-date">13:34 PM</p>
+                                    <p class="inbox-item-author">Francisca Silva</p>
+                                    <p class="inbox-item-text">Um passo de cada vez</p>
+                                    <p class="inbox-item-date">19/07/1989</p>
                                 </div>
                             </a>
                             <a href="#">
@@ -189,9 +206,9 @@
 
                 <div class="col-xs-12 col-md-6">
                     <div class="card-box">
-                        <h4 class="header-title m-t-0 m-b-20">Sales Statistics</h4>
+                        <h4 class="header-title m-t-0 m-b-20">Olha ao mérito deste mês</h4>
 
-                        <p class="font-600 m-b-5">iMacs <span class="text-danger pull-right"><b>79%</b></span></p>
+                        <p class="font-600 m-b-5">Observação dos membros <span class="text-danger pull-right"><b>79%</b></span></p>
                         <progress class="progress progress-striped progress-xs progress-danger m-b-0" value="79" max="100">79%
                         </progress>
                     </div>
@@ -226,9 +243,9 @@
                     <table class="table table-bordered m-b-0">
                         <thead>
                             <tr>
-                                <th>Company</th>
-                                <th>Start Date</th>
-                                <th>End Date</th>
+                                <th>Data</th>
+                                <th>Destino</th>
+                                <th>Doador</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
